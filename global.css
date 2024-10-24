@@ -1,0 +1,40 @@
+:root{
+    --table-heading-bg: #4cb04f;
+    --text-color: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #0004ff;
+    --bg-teal: #008080;
+    --bg-white: #dddddd;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.dropdownChildren{
+    display: none;
+}
+.active{
+    display: flex;
+}
+
+#taskPriorityDropdown {
+    color: #136b01;
+}
+
+#taskPriorityDropdown option[value="Medium"]:checked {
+    color: #a07300; 
+}
+
+#taskPriorityDropdown option[value="High"]:checked {
+    color: #7e0000;
+}
+
+/* Ye CSS table cells me overflow control karega */
+td {
+    white-space: nowrap; /* Task text ko single line me rakhega */
+    overflow: hidden; /* Overflow hone par text ko hide karega */
+    text-overflow: ellipsis; /* Ellipsis add karega overflow hone par */
+  }
+  

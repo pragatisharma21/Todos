@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+
+    <!-- tailwind css CDN  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css CDN  -->
+  </head>
+  <body>
+    <nav class="bg-[var(--bg-teal)] px-4 py-3">
+      <div
+        class="flex justify-between items-center text-center text-white font-bold"
+      >
+        <div class="w-full">
+          <a href="index.html"><p>Home</p></a>
+        </div>
+        <div class="w-full">
+          <a href="archive.html"><p>Archive</p></a>
+        </div>
+
+        <div
+          class="w-full flex justify-center gap-3 text-[var(--text-primary)]"
+        >
+          <div class="flex flex-row justify-center items-center gap-2">
+            <label class="text-[var(--text-color)]" for="PrioritySorting"
+              >Priority:</label
+            >
+            <select
+              name="SortPriority"
+              id="PrioritySorting"
+              class="rounded-lg shadow-md capitalize"
+            >
+              <option class="p-1" value="Default">default</option>
+              <option class="p-1" value="Low">Low</option>
+              <option class="p-1" value="Medium">Medium</option>
+              <option class="p-1" value="High">High</option>
+            </select>
+          </div>
+          <div class="flex flex-row justify-center items-center gap-2">
+            <label class="text-[var(--text-color)]" for="StatusSorting"
+              >Work Status:</label
+            >
+            <select
+              name="SortStatus"
+              id="StatusSorting"
+              class="rounded-lg shadow-md capitalize"
+            >
+              <option class="p-1" value="Default">default</option>
+              <option class="p-1" value="completed">completed</option>
+              <option class="p-1" value="pending">pending</option>
+              <option class="p-1" value="open">open</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="flex justify-center items-center gap-2 h-[100vh] bg-[linear-gradient(0deg,_rgba(201,230,236,1)_32%,_rgba(157,213,224,1)_71%)]"
+    >
+    <table  class="table-auto w-1/2" id="todoTable">
+        <tr class="grid grid-cols-4 overflow-hidden w-full bg-[#4cb04f] text-[var(--text-secondary)] font-bold text-lg capitalize">
+          <th class="border-2 border-white bg-[var(--table-heading-bg)] px-10 py-4">Name</th>
+          <th class="border-2 border-white bg-[var(--table-heading-bg)] px-10 py-4">Priority</th>
+          <th class="border-2 border-white bg-[var(--table-heading-bg)] px-10 py-4">Status</th>
+          <th class="border-2 border-white bg-[var(--table-heading-bg)] px-10 py-4">Delete</th>
+        </tr>
+      </thead>
+    </table>
+    </div>
+  </body>
+
+  <script src="./archive.js"></script>
+</html>
